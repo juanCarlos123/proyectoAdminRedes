@@ -4,5 +4,5 @@
 
 ## Instalación
 
-* [instalar xampp](https://www.youtube.com/watch?v=fvifgpZbLak)
-* agregar la carpeta de este proyecto en c:\xampp\htdocs
+* [Instalar xampp](https://www.youtube.com/watch?v=fvifgpZbLak)
+* Agregar la carpeta de este proyecto en c:\xampp\htdocs
