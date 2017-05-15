@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Proyecto final admin. de redes</title>
+
+  <!-- CSS  -->
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/main.css">
+
+  <!-- JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="./js/calculadora.js"></script>
+
+</head>
+<body>
+  <div class="navbar-fixed">
+    <nav class="navbar navbar-primary">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="./index.html">Administración de redes de Datos</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="./index.html">Inicio</a></li>
+          <li><a id="integrantes" href="./escenario1.html">Escenario 1</a></li>
+          <li><a id="integrantes" href="./escenario2.html">Escenario 2</a></li>
+          <li><a id="integrantes" href="./nosotros.html">Integrantes</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <div>
+          <div class="panel-group">
+            <div class="panel panel-primary">
+              <div class="panel-heading">
+                Calculadora de subnet
+              </div>
+              <div class="panel-body">
+                <form action="./php/main.php" method="POST" id="formSubnet">
+                  <div class="form-group">
+                    <label class="control-label" for="ip">IP</label>
+                    <input id="ip" name="ip" type="text" placeholder="xxx.xxx.xxx.xxx"/>
+                  </div>
+                  <div class="form-group">
+                    <label class="control-label" for="mask">cidr</label>
+                    <input id="mask" name="cidr" type="text" placeholder="/23"/>
+                  </div>
+                  <div class="form-group">
+                    <input id="submitSubnetCalculator" class="btn btn-primary" type="submit" value="Calcular">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="panel-group">
+            <div class="panel panel-primary">
+              <div class="panel-heading">
+                Clase de IP
+              </div>
+              <div class="panel-body">
+                <form action="./php/main.php" method="POST" id="classIpForm">
+                  <div class="input-field col s4">
+                    <label for="classIP">Dirección IP</label>
+                    <input placeholder="xxx.xxx.xxx.xxx" id="ipClass" name="classIp" type="text" >
+                  </div>
+                  <br>
+                  <div class="form-group">
+                    <input id="submitClassIp" class="btn btn-primary" type="submit" value="Identificar">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="panel-group">
+            <div class="panel panel-primary">
+              <div class="panel-heading">
+                Binario a decimal
+              </div>
+              <div class="panel-body">
+                <form action="./php/main.php" method="POST" id="formBinDec">
+                <div class="form-group">
+                  <label for="numeroBinario">Binario a decimal</label>
+                  <input placeholder="10010110" id="numeroBinario" name="numeroBinario" type="text" class="validate">
+                </div>
+                <div class="form-group">
+                  <label for="numeroDecimal">Decimal a binario</label>
+                  <input placeholder="150" id="numeroDecimal" name="numeroDecimal" type="text" class="validate only-numbers">
+                </div>
+                <div class="form-group">
+                  <input id="submitBinarioDecimal" type="submit" class="btn btn-primary" value="Convertir">
+                </div>
+                </form>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+    <div id="" class="col-md-5">
+      <div class="panel-group">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            Introducción
+          </div>
+          <div class="panel-body text-info">
+            <p>
+              En el presente documento se realizará a detalle un análisis para la implementación de la planeación, optimización y rediseño de la red interna de la facultad de Ingeniería en la UNAM, abarcando diversos aspectos físicos y lógicos, además de un análisis de costos y ubicación de los equipos de cómputo.
+            </p>
+            <p>
+              Para la realización de éste proyecto se consideró lo visto en el tema de evaluación de proyectos y en el de cableado estructurado, nos hemos basado en los requerimientos que se solicitan eligiendo los equipos que se encuentran actualmente en el mercado, tomando en cuenta el costo.
+            </p>
+            <p>
+              Se hace hincapié al realizar la red en base a cableado estructurado, ya que, se sabe que al no hacer uso de él puede que los costos se reduzcan, sin embargo, al seguir estas normas implica que se realice una sola inversión que cubrirá casi todo su tiempo de vida útil, ya que se está invirtiendo en analizar las necesidades presentes y futuras, se toman en cuenta posibles diseños a futuro, se comprueba la calidad del material y equipos, así como los servicios que se puedan realizar en un futuro por el proveedor. Aspectos que al utilizar un sistema de cableado tradicional no se toman en cuenta, y que pueden generar gastos extras al querer realizar modificaciones.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div id="results">
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div>
+      <p><i>
+        Ciudad Universitaria, Facultad de Ingenería, UNAM | México | 2017
+      </i></p>
+    </div>
+    <div class="footer-copyright">
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  </body>
+</html>
